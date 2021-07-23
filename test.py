@@ -1,5 +1,7 @@
 def run():
-    print('Hello')
+    nombre = input('Ingresa tu nombre: ')
+    print(nombre)
+
 
 
 if  __name__ == '__main__':
