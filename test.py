@@ -4,6 +4,7 @@ def run():
     print(f'{nombre} tiene {edad} años')
     print('Se agrega una nueva línea')
     print('Otra línea')
+    print('Línea correcta')
 
 if  __name__ == '__main__':
     run()
