@@ -28,40 +28,43 @@ def inicia_precios():
 
 
 def run():
-    precios = inicia_precios()
+    try:
+        precios = inicia_precios()
 
-    print('Los productos y precios disponibles son los siguientes: ')
-    i=0
+        print('Los productos y precios disponibles son los siguientes: ')
+        i=0
 
-    keys = list(precios.keys())
-    values = list(precios.values())
-     
-    for producto,precio in precios.items():
-        print(f'{i}.-{producto}: ${precio} MXN')
-        i+=1
+        keys = list(precios.keys())
+        values = list(precios.values())
         
-    seleccion = input('Ingresa lo que quieres comprar, para salir escribe "Q"\n =>')
-    cesta = {}
+        for producto,precio in precios.items():
+            print(f'{i}.-{producto}: ${precio} MXN')
+            i+=1
+            
+        seleccion = input('Ingresa lo que quieres comprar, para salir escribe "Q"\n =>')
+        cesta = {}
 
-    while seleccion != "Q":
-        cesta[keys[int(seleccion)]] = values[int(seleccion)]
-        seleccion = input('Ingresa nuevo producto, para salir escribe "Q" \n =>')
+        while seleccion != "Q":
+            cesta[keys[int(seleccion)]] = values[int(seleccion)]
+            seleccion = input('Ingresa nuevo producto, para salir escribe "Q" \n =>')
 
-    subtotal=0
+        subtotal=0
 
-    for producto,precio in cesta.items():
-        sub = aplica_descuento(producto,float(precio))
-        subtotal +=sub
+        for producto,precio in cesta.items():
+            sub = aplica_descuento(producto,float(precio))
+            subtotal +=sub
 
-    iva = aplica_IVA(float(subtotal))
+        iva = aplica_IVA(float(subtotal))
 
-    total = subtotal + iva
+        total = subtotal + iva
 
-    print(f'''El total de tu compra es:\n
-    subtotal: {subtotal}\n
-    IVA: {iva} \n
-    Total: {total}
-    ''')
+        print(f'''El total de tu compra es:\n
+        subtotal: {subtotal}\n
+        IVA: {iva} \n
+        Total: {total}
+        ''')
+    except:
+        print('Se ingresó un valor incorrecto')
 
 if __name__ == "__main__":
     run()
