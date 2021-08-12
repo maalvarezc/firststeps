@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Bienvenido</title>
+    <link rel='stylesheet' href='css/estilos.css' />
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img id="logo" src="imagenes/Logo.jpeg"/>
+            ** HyperBlog **
+            <span id="tagline">Tu blog de confianza</span>
+        </div>
+            <div id="post">
+                <h1>Este es el título atractivo e interesante del post y muchas cosas que te gustarán</h1>
+                <p>Y este es el párrafo de inicio donde vamos a explicar las cosas increíbles que se pueden hacer con las ramas</p>
+
+                <p>Si te gusta, dale like</p>
+            </div>
+	    <div id="footer">
+		Pie de página &lt;3 
+        </div>	    
+    </div>
+</body>
+</html>
